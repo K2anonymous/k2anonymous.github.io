@@ -413,22 +413,17 @@ const CONFIG = {
   phone:      "719-822-6652",
   linkedin:   "https://linkedin.com/in/kaibiedermann",
   github:     "https://github.com/K2anonymous",
-  contactBlurb: "I'm actively looking for <strong>IT, systems support, and infrastructure roles</strong> — especially in mission-driven organizations with a collaborative, innovative team culture.",
+  contactBlurb: "I'm actively looking for <strong>IT, systems support, and infrastructure roles</strong> — especially in mission-driven organizations with a collaborative, innovative team culture. My inbox is always open!",
 
   /* ── RESUME ───────────────────────────────── */
-  // Place your PDF in the same folder as this file, then update the filename:
   resumeFile: "Kai_Biedermann_Resume.pdf",
 
   /* ── YOUTUBE ──────────────────────────────── */
-  // Paste your YouTube playlist or channel URL here:
   youtubeUrl:   "https://www.youtube.com/playlist?list=PLIYObdfTnz3LcRrMDzOdanoaL1tVfWaua",
   youtubeLabel: "Video Portfolio Playlist",
   youtubeSub:   "Features, Documentaries, Drone Footage, VR Projects, and more.",
 
-  /* ── PHOTO CAROUSEL (25 slots) ────────────────
-     imageSrc: filename of your photo (e.g. "lab.jpg") — leave "" for placeholder
-     icon, label, sub: shown when no image is set
-  ─────────────────────────────────────────────── */
+  /* ── PHOTO CAROUSEL (25 slots) ──────────────── */
   carousel: [
     {imageSrc:"", icon:"🖨️", label:"FabLab Operations",        sub:"FSU Innovation Hub"},
     {imageSrc:"", icon:"🤖", label:"RoboHand Project",          sub:"Arduino · Robotics"},
@@ -503,8 +498,6 @@ const CONFIG = {
   ],
 
   /* ── PROJECTS ────────────────────────────── */
-  // robohand is special — it gets the full-width animated panel.
-  // The other two get ASCII art that spins on hover.
   projects: {
     robohand: {
       type:"Embedded Systems · Robotics · CAD",
@@ -659,8 +652,7 @@ const CONFIG = {
 
 <script>
 /* ══════════════════════════════════════════════════
-   HAND ANIMATION — consistent base, only fingers move
-   Palm/wrist is fixed; fingers rise one-by-one then all drop
+   HAND ANIMATION
 ══════════════════════════════════════════════════ */
 const HAND_FRAMES = [
 // 0 — all fingers down (fist)
@@ -780,7 +772,7 @@ const FRAME_LABELS = [
 const FRAME_DELAYS = [900,380,380,380,380,800,600,300,600,900];
 
 /* ══════════════════════════════════════════════════
-   CUBE ARRAY GENERATOR — simple grid builds row by row
+   CUBE ARRAY GENERATOR
 ══════════════════════════════════════════════════ */
 const CUBE_FRAMES = [
 // 0 — empty
@@ -875,7 +867,7 @@ const CUBE_LABELS = ["INIT","ROW 1","ROW 2","MATRIX","DEPTH+","RENDER","DONE ✓
 const CUBE_DELAYS = [600,500,500,500,600,900,800,400];
 
 /* ══════════════════════════════════════════════════
-   SPIDER — legs twitch up and down subtly
+   SPIDER
 ══════════════════════════════════════════════════ */
 const SPIDER_FRAMES = [
 // 0 — neutral
@@ -963,7 +955,7 @@ const SPIDER_LABELS = ["IDLE","STEP","IDLE","STEP","IDLE","←CRAWL","IDLE","CRA
 const SPIDER_DELAYS = [800,350,500,350,700,400,500,400,900];
 
 /* ══════════════════════════════════════════════════
-   3D PRINTER — print head moves left↔right, layers build up
+   3D PRINTER
 ══════════════════════════════════════════════════ */
 const PRINTER_FRAMES = [
 `   ___________
@@ -1178,7 +1170,7 @@ document.getElementById('awardsGrid').innerHTML = CONFIG.awards.map(a=>`
   </div>`).join('');
 
 /* ══════════════════════════════════════════════════
-   3D FILM-STRIP CAROUSEL — all portrait, no expand
+   3D FILM-STRIP CAROUSEL
 ══════════════════════════════════════════════════ */
 (function buildCarousel(){
   const ring  = document.getElementById('carouselRing');
